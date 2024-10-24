@@ -1,0 +1,25 @@
+.comentario-geral{
+    width: 800px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 20px;
+    background-color: #1E1C17;
+    color:white;
+
+    @font-face {
+        font-family: 'satoshi';
+        src: url('../../../public/assets/fonts/Satoshi-Variable.ttf');
+    }
+    @font-face {
+        font-family: 'angel';
+        src: url('../../../public/assets/fonts/Angelrhapsody.ttf');
+    }
+    h2{
+        font-family: angel;
+        font-weight:500 ;
+        letter-spacing: 2px;
+    }
+    p{
+        font-family: satoshi;
+    }
+    
+}

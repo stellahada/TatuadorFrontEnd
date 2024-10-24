@@ -1,0 +1,57 @@
+.Clientes-geral {
+    background: black url('../../../public/assets/images/fundo.png') repeat-y;
+
+    @font-face {
+        font-family: 'angel';
+        src: url('../../../public/assets/fonts/Angelrhapsody.ttf');
+    }
+
+    h1 {
+        text-align: center;
+        padding: 10px 0;
+        font-family: angel;
+        letter-spacing: 2px;
+        color: #DB9F6A;
+        font-size: 60px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+    gap: 20px;
+  
+    .comentario {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+  
+    .slideitem {
+      width: auto;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: transparent;
+        border-radius: 30px;
+        padding: 35px;
+        width: 1px;
+        height: 1px;
+    }
+
+    .swiper-button-next {
+        background: url('../../../public/assets/images/imgBtnDir.png') no-repeat;
+    }
+
+    .swiper-button-prev {
+        background: url('../../../public/assets/images/imgBtnEsq.png') no-repeat;
+    }
+}

@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: angel;
+    src: url('../../../public/assets/fonts/Angel.ttf');
+}
+@font-face {
+    font-family: satoshi-medium;
+    src: url('../../../public/assets/fonts/Satoshi-Medium.otf');
+}
+
+.page-orcamento{
+    background-image: url('../../../public/assets/images/fundo.png');
+    background-color: #000000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 150vh;
+    gap: 150px;
+
+    h1{
+        font-size: 70px;
+        color: #DB9F6A;
+        font-family: angel;
+        letter-spacing: 2px;
+    }
+
+
+    .container-retangulo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 300px;
+
+        .prisma{
+            width: 33px;
+            height: 33px;
+            margin-bottom: 15px;
+        }
+
+
+        .retangulo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+
+            background-image: url('../../../public/assets/images/retangulo-orçamento.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+    
+            width: 1050px;
+            height: 420px;
+            padding: 30px;
+    
+    
+            img{
+                width: 237px;
+                height: 204px;
+                margin-bottom: 40px;
+            }
+    
+            .form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+    
+                input,textarea{
+                    border-radius: 12px;
+                    height: 54px;
+                    width: 434px;
+                    text-align: start;
+                    border: none;
+                    padding: 20px;
+                    overflow-y: hidden;
+                    
+                    font-family: satoshi-medium;
+                    background-color: #F2E4DA;
+                    color: #483524;
+                }
+                .texto-final
+                {
+                    color: #483524;
+                    font-family: satoshi-medium;
+                    border-radius: 12px;
+                    background-color: #F2E4DA;
+
+
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    padding: 10px;
+                    height: 100px;
+                    width: 434px;
+                }
+                
+               
+                
+                .botoes{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    
+                    button{
+                        width: 135px;
+                        height: 54px;
+                        border-radius: 12px;
+                        border: none;
+                        
+                        font-family: satoshi-medium;
+                        background-color: #DB9F6A;
+                        color: #483524;
+    
+                        cursor: pointer;
+                    }
+
+                    .container-coluna{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        
+                       
+                        gap: 50px;
+                    }
+                    
+    
+                }
+                
+            
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 769px){
+    .page-orcamento {
+      gap: 50px;
+      height: auto;
+      padding: 20px;
+  
+      h1 {
+        font-size: 50px;
+      }
+  
+      .container-retangulo {
+        flex-direction: column;
+        width: 110vh;
+        margin-bottom: 100px;
+  
+        .retangulo {
+          flex-direction: column;
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-orcamento {
+      gap: 30px;
+      padding: 10px;
+  
+      h1 {
+        font-size: 40px;
+      }
+  
+      .container-retangulo {
+        .prisma {
+          width: 20px;
+          height: 20px;
+        }
+  
+        .retangulo {
+          padding: 20px;
+          width: 100%;
+          height: auto;
+  
+          img {
+            max-width: 150px;
+            height: auto;
+          }
+  
+          .form {
+            input,
+            textarea {
+              width: 100%;
+              max-width: 300px;
+            }
+  
+            .texto-final {
+              max-width: 300px;
+            }
+  
+            .botoes {
+              button {
+                width: 100px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

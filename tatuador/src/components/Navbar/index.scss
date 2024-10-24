@@ -1,0 +1,92 @@
+nav {
+    
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 15%;
+    
+    a {
+     color: #D0C7BF;
+     font-family: Satoshi-Bold;
+     font-size: 1rem;
+     text-decoration: none;
+     transition: 0.3s ease-in-out;
+
+        img {
+            width: 60px;
+
+        }
+
+        
+    }
+
+    a:hover{
+        color: #DB9F6A;
+    }
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+        
+    }
+}
+
+#mobile {
+    display: none;
+}
+
+#mobile i {
+    color: #DB9F6A;
+    align-items: center;
+}
+
+/* Para telas menores, no media query */
+@media screen and (max-width: 769px) {
+    /* Ajuste no navbar */
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0; /* Alinhamento no topo */
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: black;
+        box-shadow: 0 40px 60px rgb(0, 0, 0, 0.1);
+        padding: 40px 0 0 10px;
+        transition: 0.3s ease-in-out;
+        li {
+            margin-bottom: 25px;
+        }
+    }
+
+    /* Estilizando o botão "hambúrguer" para ficar no lado direito */
+    #mobile {
+        display: block;
+        position: absolute;
+        top: 20px; /* Ajuste a altura, se necessário */
+        right: 20px; /* Mantém o botão à direita */
+    }
+
+    #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+        color: #DB9F6A;
+    }
+
+    /* Quando o menu estiver ativo, o navbar vem para a direita */
+    #navbar.active {
+        right: 0;
+    }
+}

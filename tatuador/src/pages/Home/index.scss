@@ -1,0 +1,176 @@
+@font-face {
+  font-family: Angel;
+  src: url('../../../public/assets/fonts/Angelrhapsody.ttf');
+}
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('../../../public/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('../../../public/assets/fonts/Satoshi-Bold.woff') format('woff'),
+       url('../../../public/assets/fonts/Satoshi-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: Satoshi-Variable;
+  src: 
+       url('../../../public/assets/fonts/Satoshi-Variable.ttf');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+  
+}
+.home {
+    font-family: Satoshi-Variable;
+    background-color: black;
+    background-image: url('../../../public/assets/images/fundo.png');
+    nav {
+       a {
+        color: #D0C7BF;
+        font-family: Satoshi-Bold;
+        font-size: 1rem;
+        text-decoration: none;
+       }
+       img {
+        width: 50px;
+        max-width: 100%;
+       }
+    }
+
+    h1 {
+      font-size: 80px;
+      font-family: Angel;
+      color: #FFF4EB;
+     
+      letter-spacing: 4px;
+      .highlight {
+        color: #DB9F6A;
+    }
+    }
+    .inicio {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0 8%;
+      .caveira {
+        img {
+          margin: 2px;
+          width: 100%; 
+          height: auto; 
+        }
+      }
+    }
+    .botaoOrcamento {
+      width: 70%; 
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+   .horario {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    color: #D0C7BF;
+    font-size: 1.2rem;
+    gap: 10px;
+    flex-wrap: wrap;
+    img {
+      width: 15%;
+      height: 15%;
+    }
+
+    .horarioTexto{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5vw;
+      gap: 30px;
+      
+      .seg-sex {
+        display: flex;
+        flex-direction: column;
+        color: #DB9F6A;
+        
+      }
+    }
+   }
+}
+
+@media screen and (max-width: 769px) {
+  
+  .home {
+      padding-top: 50px;
+  }
+ 
+  .botaoOrcamento {
+      width: 90%;
+     
+      display: flex;
+      justify-content: flex-start;
+      color: black;
+      margin: 20px 0;
+  }
+
+  
+  .horario {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 20px 0;
+
+      
+  }
+  .horarioTexto{
+    display: flex;
+    justify-content: flex-start;
+    
+
+    
+    
+  }
+
+.seg-sex {
+  display: flex;
+  flex-direction: column;
+  color: #DB9F6A;
+  
+}
+
+
+.horarioTexto p {
+  margin: 0;
+  font-size: 1rem;
+  
+}
+ 
+  #navbar {
+      display: none;
+  }
+
+  #mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+
+  #mobile i {
+      font-size: 2rem;
+      color: #FFF4EB;
+  }
+
+  .caveira {
+      display: none; /* Remover imagem da caveira no mobile */
+  }
+}

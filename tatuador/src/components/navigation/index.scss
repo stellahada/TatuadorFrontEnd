@@ -1,0 +1,50 @@
+.navigation-geral{
+    @font-face {
+        font-family: 'satoshi';
+        src: url('../../../public/assets/fonts/Satoshi-Variable.ttf');
+    }
+    font-family: satoshi;
+    font-weight: bold;
+    color:#FFF4EB;
+    opacity: 80%;
+
+    width: 100%;
+    overflow:  auto; 
+
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    
+    background: rgba(42, 39, 34, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin-top: 70px;
+
+    @media (min-width:900px){
+        .tipo{
+            overflow:  auto; 
+        }
+    }
+    .tipo{
+        padding: 0 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        img{
+            max-width: 52px;
+        }
+        .minlist{
+            max-width: 55px;
+        }
+        .rlist{
+            max-width: 56px;
+        }
+        .ltrn{
+            max-width: 32px;
+        }
+    }
+}
