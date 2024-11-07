@@ -1,6 +1,7 @@
 import './index.scss'
 import '../../components/fonts.css'
 import axios from 'axios';
+import { API_URL } from '../../api/constants';
 
 import { useState } from 'react';
 
@@ -18,7 +19,7 @@ export default function Login(){
                 "email": email,
                 "senha": senha
             }
-            let resp = await axios.post('http://localhost:3010/login', body);
+            let resp = await axios.post(`${API_URL}/login`, body);
             
             if (resp && resp.data) {
                 localStorage.setItem('TOKEN', resp.data.token);
