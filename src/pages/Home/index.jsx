@@ -20,7 +20,7 @@ export default function Home() {
                         <img className='botaoOrcamento' src="./assets/images/botaoorcamento.png" alt="faça seu orçamento" />
 
                         <div className='horario'>
-                            <img src="./Assets/images/horarioicon.png" />
+                            <img src="./assets/images/horarioicon.png" />
                             <div className='horarioTexto'>
                                 <div className='seg-sex'>
                                     <p>Seg-Sex</p>
@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                     
                     <div className='caveira'>
-                        <img src='./assets/images/caveirainicio.png'></img>
+                        <img src='/assets/images/caveirainicio.png'></img>
                     </div>
                 </div>
             </div>
