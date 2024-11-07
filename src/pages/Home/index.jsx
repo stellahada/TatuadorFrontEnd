@@ -17,10 +17,10 @@ export default function Home() {
                     <div className='pinturas'>
                         <h1>Pinturas corporais que<br/> <span class="highlight">desafiam</span> sua<br/>  alma</h1>
 
-                        <img className='botaoOrcamento' src="./assets/Images/botaoorcamento.png" alt="faça seu orçamento" />
+                        <img className='botaoOrcamento' src="./assets/images/botaoorcamento.png" alt="faça seu orçamento" />
 
                         <div className='horario'>
-                            <img src="./Assets/Images/horarioicon.png" />
+                            <img src="./Assets/images/horarioicon.png" />
                             <div className='horarioTexto'>
                                 <div className='seg-sex'>
                                     <p>Seg-Sex</p>
@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                     
                     <div className='caveira'>
-                        <img src='./assets/Images/caveirainicio.png'></img>
+                        <img src='./assets/images/caveirainicio.png'></img>
                     </div>
                 </div>
             </div>

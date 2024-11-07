@@ -39,7 +39,7 @@ export default function Orcamento() {
             telefone:telefone
           }
       }
-      let resp = axios.post(`${API_URL}email`, body)
+      let resp = axios.post(`${API_URL}/email`, body)
       
       alert(resp)
   
@@ -55,7 +55,7 @@ export default function Orcamento() {
     <div className='page-orcamento'>
       <h1>Faça seu orçamento</h1>
       <div className='container-retangulo'>
-        <img className='prisma' src='./assets/images/polygon 3.png' alt='' />
+        <img className='prisma' src='./assets/images/polygon.png' alt='' />
         <div className='retangulo'>
           <img src='./assets/images/carta.png' alt='' />
           <div className='form'>
@@ -102,7 +102,7 @@ export default function Orcamento() {
             </div>
           </div>
         </div>
-        <img className='prisma' src='./assets/images/polygon 3.png' alt='' />
+        <img className='prisma' src='./assets/images/polygon.png' alt='' />
       </div>
     </div>
   );

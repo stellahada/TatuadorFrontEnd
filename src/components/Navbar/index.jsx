@@ -22,7 +22,7 @@ const Navbar = () => {
                 <li><a href="/artista">ARTISTA</a></li>
                 <li>
                     <a href="#" onClick={handleLogin}>
-                        <img src="/Assets/Images/borboleta.png" alt="Borboleta" />
+                        <img src="/Assets/images/borboleta.png" alt="Borboleta" />
                     </a>
                 </li>
                 <li><a href="/feedbacks">FEEDBACKS</a></li>
