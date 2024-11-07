@@ -102,7 +102,7 @@ export default function Orcamento() {
             </div>
           </div>
         </div>
-        <img className='prisma' src='./assets/images/polygon.png' alt='' />
+        <img className='prisma' src='./assets/images/orcamento/retangulo.png' alt='' />
       </div>
     </div>
   );
