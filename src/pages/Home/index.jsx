@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                     
                     <div className='caveira'>
-                        <img src='/assets/images/caveirainicio.png'></img>
+                        <img src='./assets/images/home/caveira.png'></img>
                     </div>
                 </div>
             </div>
