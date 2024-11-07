@@ -1,0 +1,24 @@
+.photo-geral{
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img{
+        border-radius: 40px;
+        max-width: 280px;
+        max-height: 400px;
+    }
+
+    .two-photo{
+        display: flex;
+            flex-direction: column;
+            gap:30px;
+
+            img{
+                max-height: 150px;
+                max-width: 700px;
+            }
+    }
+}

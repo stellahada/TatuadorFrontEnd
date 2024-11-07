@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+.comp-sessaoAgenda{
+    background-color: #2A2722;
+    width: 100%;
+    max-width: 100vw;
+    height: 45vh;
+
+    border-radius: 30px;    
+    margin: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container-sessaoAgenda{
+        width: 100%;
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        .agenda-periodo{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 75vw;
+
+            align-items: center;
+            justify-content: space-between;
+            height: 6vh;
+
+            .agenda-periodo-info{
+                display: flex;
+                flex-direction: row;
+
+                align-items: center;
+                justify-content: center;
+
+                img{
+                    width: 100%;
+                    max-width: 4vw;
+                    height: 4vh;
+                }
+                p{
+                    font-size: clamp(0.5rem,0.9rem,3rem);
+                }
+            }
+
+            p{
+                font-size: clamp(0.5rem,0.9rem,3rem);
+                width: 100%;
+                max-width: 10vw;
+
+               
+            }
+        }
+
+        .agenda-informacoes{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 70vw;
+            height: 6vh;
+            align-items: center;
+            justify-content: space-between;
+
+            
+
+            .informacoes-nome{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                
+                h1{
+                    font-size: clamp(0.5rem,0.9rem,3rem);
+                }
+                
+                p{
+                    font-size: clamp(0.5rem,0.9rem,3rem);
+                }
+
+            }
+            .agenda-botoes{
+                display: flex;
+                flex-direction: row;
+
+                align-items: end;
+                justify-content: end;
+
+                width: 100%;
+                max-width: 40vw;
+                height: 6vh;
+
+               
+                gap: 5px;
+
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #2A2722;
+                  
+                    border: none;
+                    width: 100%;
+                    max-width: 6vw;
+                    height: 6vh;
+                
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        max-width: 3vw;
+                        height: 5vh;
+
+                        
+                    }
+                    .cancelar{
+                    max-width: 1.5vw;
+                    height: 3vh;
+                    }
+                }
+                button:hover{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #31302e;
+                  
+                    border: none;
+                    width: 100%;
+                    border-radius: 100vw;
+                    max-width: 6vw;
+                    height: 6vh;
+                
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        max-width: 3vw;
+                        height: 5vh;
+
+                        
+                    }
+                    .cancelar{
+                    max-width: 1.5vw;
+                    height: 3vh;
+                    }
+                }
+
+               
+            }
+        }
+
+        .agenda-imagem{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 75vw;
+            height: 25vh;
+           
+
+            align-items: center;
+            gap: 20px;
+
+            img{
+                width: 100%;
+                max-width: 14vw;
+                height: 25vh;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,31 @@
+.galery-geral{
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img{
+        border-radius: 40px;
+        max-width: 280px;
+        max-height: 405px;
+    }
+    .imgButton{
+        max-width: 80px;
+    }
+
+    .galery{
+        display: flex;
+        gap:20px;
+
+        .galery-vertical{
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+
+            img{
+                max-height: 200px;
+            }
+        }
+    }
+}

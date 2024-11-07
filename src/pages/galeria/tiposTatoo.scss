@@ -1,0 +1,54 @@
+.tiposTatoo-geral {
+    background: black url('../../../public/assets/images/fundoTela/backImg.png') repeat;
+
+    @font-face {
+        font-family: 'angel';
+        src: url('../../../public/assets/fonts/Angelrhapsody.ttf');
+    }
+
+    font-family: angel;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+
+    .navigation {
+        overflow: initial;
+        overflow: hidden;
+
+    }
+
+    h2 {
+        letter-spacing: 2px;
+        color: #DB9F6A;
+        font-size: 60px;
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .slideitem {
+        width: AUTO;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: transparent;
+        border-radius: 30px;
+        padding: 30px;
+        width: 1px;
+        height: 1px;
+        margin: 0px 100px;
+    }
+
+    .swiper-button-next {
+    
+        background: url('../../../public/assets/images/imgBotoes/imgBtnDir.png') no-repeat center ;
+    }
+
+    .swiper-button-prev {
+        background: url('../../../public/assets/images/imgBotoes/imgBtnEsq.png') no-repeat center ;
+    }
+}

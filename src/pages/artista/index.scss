@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Angel;
+    src: url('../../../public/assets/fonts/Angelrhapsody.ttf');
+  }
+  
+  @font-face {
+    font-family: Satoshi-Bold;
+    src: url('../../../public/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('../../../public/assets/fonts/Satoshi-Bold.woff') format('woff'),
+         url('../../../public/assets/fonts/Satoshi-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  @font-face {
+    font-family: Satoshi-Variable;
+    src: 
+         url('../../../public/assets/fonts/Satoshi-Variable.ttf');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    
+}
+
+.Artista {
+    font-family: Satoshi-variable;
+    color: #D0C7BF;
+    background-image: url('../../../public/assets/images/fundoArtista.png');
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+   
+    
+    h1 {
+        
+        font-family: Angel;
+        color: #DB9F6A;
+        font-size: 80px;
+
+    }
+    .Textos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .secao1 {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        width: 90%;
+        .highlight {
+            font-family: Angel;
+            font-size: 40px;
+        }
+        p {
+            font-size: 25px;
+            
+        }
+    }
+    img {
+        width: 20%;
+
+    }
+}
+
+/* Para o layout mobile */
+@media screen and (max-width: 769px) {
+    .Artista {
+        gap: 40px;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        padding-top: 90px;
+        .Textos {
+            gap: 40px;
+          
+            .secao1 {
+                display: flex;
+                flex-direction: column;
+                justify-content:flex-start ;
+                align-items: flex-start;
+                
+                .imagem2 {
+                    position: relative;
+                    bottom: 927px;
+                    right: -270px;
+                    
+                  //  border: 1px red solid;
+                }
+                
+                p{
+                    width: 90%;
+                }
+            }
+            img {
+                width: 40%;
+               // border: 1px red solid;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,109 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login-page {
+    background-image: url('../../../public/assets/images/fundo.png');
+    background-color: black;
+    color: #FFF4EB;
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: satoshi;
+    
+    .adm {
+        background-image: url('../../../public/assets/images/login/fundoLogin.png');
+        background-size: 25vw 80vh; 
+        background-repeat: no-repeat;
+        margin-top: 30px;
+        padding: 20px;
+        width: 100%; 
+        max-width: 25vw; 
+        height: 80vh; 
+        position: relative;
+        
+    }
+    .logo {
+        padding-top: 25px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .titulo {
+            font-family: Angel;
+            font-size: clamp(0.5rem,2.5rem,3rem);
+            letter-spacing: 0.08em;
+        }
+
+        img {
+            width:100%;
+            max-width: 4vw;
+        }
+    }
+    h2 {
+        color: #FFFFFF;
+        font-size: clamp(0.5rem,1.5rem,3rem);
+        margin-bottom: 20px;
+    }
+
+    .login {
+        
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 21vw;
+
+                label {
+                    color: #FFFFFF;
+                    text-align: left;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #F2E4DA;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        .botao {
+            display: flex;
+            justify-content: center;
+
+            button {
+                width: 140px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #DB9F6A;
+                color: #FFFFFF;
+                cursor: pointer;
+                transition: background-color 0.3s;
+    
+                &:hover {
+                    background-color: #cf803a;
+                }
+            }
+        }
+        
+    }
+}

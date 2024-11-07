@@ -1,0 +1,14 @@
+.component-espaco{
+    input{
+        white-space: normal;
+        word-wrap: break-word;
+        box-sizing: "border-box";
+        flex-wrap: wrap;
+    }
+
+    input::placeholder{
+        white-space: normal; 
+        word-wrap: break-word;
+        text-wrap: stable;
+    }
+}
