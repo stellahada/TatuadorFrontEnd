@@ -2,6 +2,7 @@ import './index.scss';
 
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../../api/constants';
 
 export default function ModalItemAgenda({ isOpen, closeModal,idA,dataA,valorA,urlA,horarioA,clienteA,descricaoA,statusA}) {
     
@@ -32,14 +33,14 @@ export default function ModalItemAgenda({ isOpen, closeModal,idA,dataA,valorA,ur
             "descricao":descricao,
             "status":status,
         }
-        let resp = axios.put('http://localhost:3010/agenda/'+idA, body)
+        let resp = axios.put(`${API_URL}/agenda/`+idA, body)
         
         alert("Agendamento alterado com sucesso")
     }
 
     async function Deletar(){
        
-        let resp = axios.delete('http://localhost:3010/agenda/'+idA)
+        let resp = axios.delete(`${API_URL}/agenda/`+idA)
         
         alert("Agendamento excluido com sucesso")
     }

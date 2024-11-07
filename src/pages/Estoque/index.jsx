@@ -4,6 +4,7 @@ import ModalEstoque from '../../components/modaEstoque';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../api/constants';
 
 export default function Estoque() {
     const [openModal, setOpenModal] = useState(false);
@@ -25,7 +26,7 @@ export default function Estoque() {
     }
 
     async function buscar() {
-        let resp = await axios.get('http://localhost:3010/produtos');
+        let resp = await axios.get(`${API_URL}/produtos`);
         setDados(resp.data.produtos);
     }
 

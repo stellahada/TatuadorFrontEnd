@@ -2,6 +2,7 @@ import './index.scss';
 
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../../api/constants';
 
 export default function ModalEstoque({ isOpen, closeModal}) {
     
@@ -22,7 +23,7 @@ export default function ModalEstoque({ isOpen, closeModal}) {
             "disponivel": qntd,
             "total": qntdTol
         }
-        let resp = axios.post('http://localhost:3010/produtos', body)
+        let resp = axios.post(`${API_URL}/produtos`, body)
         
         alert("Novo produto cadastrado com sucesso")
     }

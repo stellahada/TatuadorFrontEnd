@@ -2,6 +2,7 @@ import './index.scss';
 
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../../api/constants';
 
 export default function ModalItem({ isOpen, closeModal,idI, nomeI,urlI,disponivelI,totalI }) {
     let [nome, setNome] = useState(nomeI)
@@ -20,14 +21,14 @@ export default function ModalItem({ isOpen, closeModal,idI, nomeI,urlI,disponive
             "disponivel": qntd,
             "total": qntdTol
         }
-        let resp = axios.put('http://localhost:3010/produto/'+idI, body)
+        let resp = axios.put(`${API_URL}/produto/`+idI, body)
         
         alert("Produto alterado cadastrado com sucesso")
     }
 
     async function Deletar(){
        
-        let resp = axios.delete('http://localhost:3010/produto/'+idI)
+        let resp = axios.delete(`${API_URL}/produto/`+idI)
         
         alert("Produto deletado com sucesso")
     }

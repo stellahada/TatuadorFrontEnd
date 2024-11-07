@@ -2,6 +2,7 @@ import './index.scss';
 
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../../api/constants';
 
 export default function ModalAgenda({ isOpen, closeModal}) {
     
@@ -29,7 +30,7 @@ export default function ModalAgenda({ isOpen, closeModal}) {
             "descricao":descricao,
 
         }
-        let resp = axios.post('http://localhost:3010/agenda', body)
+        let resp = axios.post(`${API_URL}/agenda`, body)
         
         alert("Novo agendamento cadastrado com sucesso")
     }

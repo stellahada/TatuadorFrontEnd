@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './index.scss';
 import Espaco from '../../components/input';
 import axios from 'axios';
+import { API_URL } from '../../api/constants';
 
 export default function Orcamento() {
 
@@ -38,7 +39,7 @@ export default function Orcamento() {
             telefone:telefone
           }
       }
-      let resp = axios.post('http://localhost:3010/email', body)
+      let resp = axios.post(`${API_URL}email`, body)
       
       alert(resp)
   

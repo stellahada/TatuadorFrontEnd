@@ -3,6 +3,7 @@ import './index.scss';
 import ModalItemAgenda from '../moldalItemAgenda';
 
 import { useState } from 'react';
+import { API_URL } from '../../api/constants';
 import axios from 'axios';
 
 export default function SessaoAgenda({id,nome,url,valor,descricao,data,horario,status}) {
@@ -18,7 +19,7 @@ export default function SessaoAgenda({id,nome,url,valor,descricao,data,horario,s
 
     async function AlterarStatus(status){
        
-        let resp = axios.put('http://localhost:3010/agenda/'+id+'/'+status)
+        let resp = axios.put(`${API_URL}/agenda/`+id+'/'+status)
         
     }
 
