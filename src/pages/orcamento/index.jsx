@@ -55,7 +55,7 @@ export default function Orcamento() {
     <div className='page-orcamento'>
       <h1>Faça seu orçamento</h1>
       <div className='container-retangulo'>
-        <img className='prisma' src='./assets/images/polygon.png' alt='' />
+        <img className='prisma' src='./assets/images/orcamento/retangulo.png' alt='' />
         <div className='retangulo'>
           <img src='./assets/images/carta.png' alt='' />
           <div className='form'>
