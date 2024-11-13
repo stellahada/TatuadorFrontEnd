@@ -9,12 +9,24 @@ import Galeria from '../galeria/tiposTatoo.jsx'
 export default function LandingPage(){
     return(
         <div>
-            <Home />
-            <Galeria/>
-            <Artista />
-            <Feedbacks/>
-            <Studio />
-            <Orcamento />
+           <div id="home">
+                <Home />
+            </div>
+            <div id="galeria">
+                <Galeria/>
+            </div>
+            <div id="artista">
+                <Artista />
+            </div>
+            <div id="feedbacks">
+                <Feedbacks/>
+            </div>
+            <div id="studio">
+                <Studio />
+            </div>
+            <div id="orcamento">
+                <Orcamento />
+            </div>
             <Footer />
         </div>
     )

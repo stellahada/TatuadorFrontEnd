@@ -25,13 +25,19 @@ export default function Estoque() {
         setOpenModal(false);
     }
 
+
     async function buscar() {
-        let resp = await axios.get(`${API_URL}/produtos`);
+        let token = localStorage.getItem('TOKEN');
+        let resp = await axios.get(`${API_URL}/produtos`,{
+            headers: { 'x-access-token': token }});
         setDados(resp.data.produtos);
     }
 
-
     useEffect(() => {
+        if (!localStorage.getItem('TOKEN')) {
+            navigate('/');
+            return;
+        }
         buscar();
         setDadosFiltrados(
             dados.filter((item) =>
@@ -40,15 +46,22 @@ export default function Estoque() {
         );
     }, [buscado, dados]);
 
+    function logoff() {
+        localStorage.removeItem('TOKEN');
+        navigate('/');
+    }
+
     return (
         <div className='storage-page'>
             <div className='button-section'>
                 <div className='img'>
-                    <img className='butterfly' src='/assets/images/estoque/borboleta.png' alt="Borboleta" />
+                    <img className='butterfly' src='./assets/images/estoque/borboleta.png' alt="Borboleta" />
                 </div>
                 <div className='botao-estoque'>
                     <button onClick={mudaTela}>Agenda</button>
                     <button className='escuro'>Estoque</button>
+
+                    <button  onClick={logoff} className='logoff'>Sair</button>
                 </div>
                 
             </div>

@@ -18,8 +18,14 @@ export default function SessaoAgenda({id,nome,url,valor,descricao,data,horario,s
     }
 
     async function AlterarStatus(status){
-       
-        let resp = axios.put(`${API_URL}/agenda/`+id+'/'+status)
+        let token = localStorage.getItem('TOKEN');
+        let resp = await axios.put(
+            `${API_URL}/agenda/${id}/${status}`,  
+            {}, 
+            {
+                headers: { 'x-access-token': token } 
+            }
+        );
         
     }
 

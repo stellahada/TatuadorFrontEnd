@@ -30,7 +30,9 @@ export default function ModalAgenda({ isOpen, closeModal}) {
             "descricao":descricao,
 
         }
-        let resp = axios.post(`${API_URL}/agenda`, body)
+        let token = localStorage.getItem('TOKEN');
+        let resp = axios.post(`${API_URL}/agenda`,body,{
+            headers: { 'x-access-token': token }})
         
         alert("Novo agendamento cadastrado com sucesso")
     }

@@ -32,7 +32,9 @@ export default function Agenda() {
     }
 
     async function buscar() {
-        let resp = await axios.get(`${API_URL}/agenda`);
+        let token = localStorage.getItem('TOKEN');
+        let resp = await axios.get(`${API_URL}/agenda`,{
+            headers: { 'x-access-token': token }});
         setDados(resp.data.agenda);
     }
 
@@ -42,6 +44,10 @@ export default function Agenda() {
     });
 
     useEffect(() => {
+        if (!localStorage.getItem('TOKEN')) {
+            navigate('/');
+            return;
+        }
         buscar();
         setFiltrado(
             dadosFiltrados.filter((item) =>
@@ -50,7 +56,10 @@ export default function Agenda() {
         );
     }, [dados]);
 
-    
+    function logoff() {
+        localStorage.removeItem('TOKEN');
+        navigate('/');
+    }
 
 
 
@@ -63,6 +72,7 @@ export default function Agenda() {
                 <div className='botao-agenda'>
                     <button className='escuro'>Agenda</button>
                     <button onClick={mudaTela}>Estoque</button>
+                    <button  onClick={logoff} className='logoff'>Sair</button>
                 </div>
             </div>
 

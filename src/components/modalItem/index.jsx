@@ -21,14 +21,17 @@ export default function ModalItem({ isOpen, closeModal,idI, nomeI,urlI,disponive
             "disponivel": qntd,
             "total": qntdTol
         }
-        let resp = axios.put(`${API_URL}/produto/`+idI, body)
+        let token = localStorage.getItem('TOKEN');
+        let resp = axios.put(`${API_URL}/produto/`+idI, body,{
+            headers: { 'x-access-token': token }})
         
         alert("Produto alterado cadastrado com sucesso")
     }
 
     async function Deletar(){
-       
-        let resp = axios.delete(`${API_URL}/produto/`+idI)
+        let token = localStorage.getItem('TOKEN');
+        let resp = axios.delete(`${API_URL}/produto/`+idI,{
+            headers: { 'x-access-token': token }})
         
         alert("Produto deletado com sucesso")
     }

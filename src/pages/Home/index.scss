@@ -46,7 +46,7 @@
     }
 
     h1 {
-      font-size: clamp(0.5rem,7rem,10rem);
+      font-size: clamp(0.5rem,6rem,10rem);
       font-family: Angel;
       color: #FFF4EB;
       margin-bottom: 50px;
@@ -64,13 +64,14 @@
       .caveira {
         img {
           margin: 2px;
-          width: 100%; 
+          width: 100%;
+          max-width: 70vw; 
           height: auto; 
         }
       }
     }
     .botaoOrcamento {
-      width: 70%; 
+      width: 70%;
       margin-bottom: 40px;
       cursor: pointer;
     }
@@ -83,6 +84,7 @@
     font-size: 1.2rem;
     gap: 30px;
     flex-wrap: wrap;
+    margin-bottom:20px ;
     img {
       width: 15%;
       height: 15%;
@@ -109,10 +111,13 @@
   
   .home {
       padding-top: 50px;
+
+      
   }
- 
+  
   .botaoOrcamento {
       width: 90%;
+    
      
       display: flex;
       justify-content: flex-start;

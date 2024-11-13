@@ -4,6 +4,13 @@ import Navbar from '../../components/Navbar';
 
 
 export default function Home() {
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
    
     return (
         
@@ -17,7 +24,7 @@ export default function Home() {
                     <div className='pinturas'>
                         <h1>Pinturas corporais que<br/> <span class="highlight">desafiam</span> sua<br/>  alma</h1>
 
-                        <img className='botaoOrcamento' src="./assets/images/botaoorcamento.png" alt="faça seu orçamento" />
+                        <img href="#" onClick={() => scrollToSection('orcamento')} className='botaoOrcamento' src="./assets/images/botaoorcamento.png" alt="faça seu orçamento" />
 
                         <div className='horario'>
                             <img src="./assets/images/horarioicon.png" />

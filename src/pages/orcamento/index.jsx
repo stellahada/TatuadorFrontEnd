@@ -22,9 +22,66 @@ export default function Orcamento() {
   const [nome,setNome] = useState('')
   const [orcamento, setOrcamento] = useState('')
   const [telefone, setTelefone] = useState('')
+  const [data, setData] = useState('')
   
 
+  const [errorNome, setErrorNome] = useState('');
+  const [errorEmail, setErrorEmail] = useState('');
+  const [errorTelefone, setErrorTelefone] = useState('');
+  const [errorDescricao, setErrorDescricao] = useState('');
+  const [errorOrcamento, setErrorOrcamento] = useState('');
 
+  function validarEtapa1() {
+    let valid = true;
+    if (!nome) {
+      alert('Nome é obrigatório, por favor digite novamente')
+      valid = false;
+    } else {
+      setErrorNome('');
+    }
+
+    if (!to || !/\S+@\S+\.\S+/.test(to)) { 
+      alert('Email invalido, por favor digite novamente')
+      valid = false;
+    } else {
+      setErrorEmail('');
+    }
+
+    if (!telefone) {
+      alert('Telefone invalido, por favor digite novamente')
+      valid = false;
+    } else {
+      setErrorTelefone('');
+    }
+
+    return valid;
+  }
+
+  function validarEtapa2() {
+    let valid = true;
+
+    if (!descricao) {
+      alert('Descriçao é obrigatoria, por favor digite novamente')
+      valid = false;
+    } else {
+      setErrorDescricao('');
+    }
+
+    if (!orcamento) {
+      alert('Orçamento é obrigatoria, por favor digite novamente')
+      valid = false;
+    } else {
+      setErrorOrcamento('');
+    }
+    if (!data) {
+      alert('Data é obrigatoria, por favor selecione novamente')
+      valid = false;
+    } else {
+      setErrorOrcamento('');
+    }
+
+    return valid;
+  }
  
 
   async function enviaEmail(){
@@ -39,9 +96,9 @@ export default function Orcamento() {
             telefone:telefone
           }
       }
-      let resp = axios.post(`${API_URL}/email`, body)
-      
-      alert(resp)
+      let token = localStorage.getItem('TOKEN');
+      let resp = axios.post(`${API_URL}/email`, body,{
+        headers: { 'x-access-token': token }})
   
   } 
 
@@ -62,16 +119,23 @@ export default function Orcamento() {
             <form action='' className='form'>
                 {visibilidadeInput == 1 && (
                   <div className='form'>
-                      <textarea name="" id="" cols="30" rows="10" onChange={(e)=>setNome(e.target.value)} placeholder={placeholder1}></textarea>
+                      <input name="" id="" cols="30" rows="10" onChange={(e)=>setNome(e.target.value)} placeholder={placeholder1}></input>
+                      {errorNome && <p className="error">{errorNome}</p>}
+
                       <input type="text" name="" id="" placeholder={placeholder2} onChange={(e)=>setTo(e.target.value)}/>
+                      {errorEmail && <p className="error">{errorEmail}</p>}
+
+                      
                       <input type="text" name="" id="" placeholder={placeholder3} onChange={(e)=>setTelefone(e.target.value)}/>
+                      {errorTelefone && <p className="error">{errorTelefone}</p>}
+                      
                   </div>
                 )}
                 {visibilidadeInput == 2 && (
                   <div className='form'>
-                      <textarea name="" id="" cols="30" rows="10" placeholder={placeholder4}onChange={(e)=>setDescricao(e.target.value)}></textarea>
+                      <textarea name="" id="" cols="30" rows="10" placeholder={placeholder4}onChange={(e)=>setDescricao(e.target.value)} style={{height:'20vh'}}></textarea>
                       <input type="text" name="" id="" onChange={(e)=>setOrcamento(e.target.value)}  placeholder={placeholder5} />
-                      <input type="text" name="" id="" placeholder={placeholder6} />
+                      <input type="date" name="" id="" onChange={(e)=>setData(e.target.value)} placeholder={placeholder6} />
                   </div>
                 )}
             </form>
@@ -81,13 +145,17 @@ export default function Orcamento() {
 
               {visibilidadeInput == 1 && (
                 <div className='botoes'>
-                  <button onClick={()=>setVisibildiadeInput(2)}>Proximo</button>
-                </div>
+                <button onClick={() => {
+                  if (validarEtapa1()) setVisibildiadeInput(2);
+                }}>Próximo</button>
+              </div>
               )}
               {visibilidadeInput == 2 && (
                 <div className='botoes'>
                   <button onClick={()=>setVisibildiadeInput(1)}>Voltar</button>
-                  <button onClick={enviaEmail}>Continuar</button>
+                  <button onClick={() => {
+                  if (validarEtapa2()) enviaEmail();
+                }}>Continuar</button>
                 </div>
               )}
               {visibilidadeInput == 3 && (

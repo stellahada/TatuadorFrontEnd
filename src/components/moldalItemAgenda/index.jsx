@@ -33,14 +33,17 @@ export default function ModalItemAgenda({ isOpen, closeModal,idA,dataA,valorA,ur
             "descricao":descricao,
             "status":status,
         }
-        let resp = axios.put(`${API_URL}/agenda/`+idA, body)
+        let token = localStorage.getItem('TOKEN');
+        let resp = axios.put(`${API_URL}/agenda/`+idA, body,{
+            headers: { 'x-access-token': token }})
         
         alert("Agendamento alterado com sucesso")
     }
 
     async function Deletar(){
-       
-        let resp = axios.delete(`${API_URL}/agenda/`+idA)
+        let token = localStorage.getItem('TOKEN');
+        let resp = axios.delete(`${API_URL}/agenda/`+idA,{
+            headers: { 'x-access-token': token }})
         
         alert("Agendamento excluido com sucesso")
     }

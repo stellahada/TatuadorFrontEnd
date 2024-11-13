@@ -23,7 +23,9 @@ export default function ModalEstoque({ isOpen, closeModal}) {
             "disponivel": qntd,
             "total": qntdTol
         }
-        let resp = axios.post(`${API_URL}/produtos`, body)
+        let token = localStorage.getItem('TOKEN');
+        let resp = axios.post(`${API_URL}/produtos`, body,{
+            headers: { 'x-access-token': token }})
         
         alert("Novo produto cadastrado com sucesso")
     }
