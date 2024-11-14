@@ -42,8 +42,8 @@ export default function footer(){
                 </div>
                 <img src="./assets/images/footer/linha.png" alt="" />
                 <div className='container-links'>
-                        <a href="#" onClick={() => scrollToSection('home')}>PÁGINA INICIAL</a>
-                        <a href="#" onClick={() => scrollToSection('galeria')}>PORTFÓLIO</a>
+                        <a href="#" onClick={() => scrollToSection('orcamento')}>PÁGINA INICIAL</a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('galeria'); }}>PORTFÓLIO</a>
                         <a href="#" onClick={() => scrollToSection('artista')}>ARTISTA</a>
                 </div>
                 <img src="./assets/images/footer/linha.png" alt="" />

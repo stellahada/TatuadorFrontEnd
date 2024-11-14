@@ -70,7 +70,7 @@ export default function ModalAgenda({ isOpen, closeModal}) {
                     </div>
                     <div className='container-input'>
                         <label htmlFor=''>Valor</label>
-                        <input type="text" onChange={(e)=>setValor(e.target.value)}/>
+                        <input type="number" onChange={(e)=>setValor(e.target.value)}/>
                     </div>
                     <div className='container-input'>
                         <div className='sessao-horarios'>
