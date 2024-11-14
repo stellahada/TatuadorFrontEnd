@@ -60,11 +60,11 @@ export default function ModalEstoque({ isOpen, closeModal}) {
                     </div>
                     <div className='container-input'>
                         <label htmlFor=''>Quantidade Disponível</label>
-                        <input type="text" onChange={(e)=>setQntd(e.target.value)}/>
+                        <input type="number" onChange={(e)=>setQntd(e.target.value)}/>
                     </div>
                     <div className='container-input'>
                         <label htmlFor=''>Quantidade Total</label>
-                        <input type="text" onChange={(e)=>setQntdTol(e.target.value)}/>
+                        <input type="number" onChange={(e)=>setQntdTol(e.target.value)}/>
                     </div>
                 </form>
 
