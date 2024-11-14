@@ -42,16 +42,16 @@ export default function footer(){
                 </div>
                 <img src="./assets/images/footer/linha.png" alt="" />
                 <div className='container-links'>
-                        <a href="#" onClick={() => scrollToSection('orcamento')}>PÁGINA INICIAL</a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>PÁGINA INICIAL</a>
                         <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('galeria'); }}>PORTFÓLIO</a>
-                        <a href="#" onClick={() => scrollToSection('artista')}>ARTISTA</a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('artista'); }}>ARTISTA</a>
                 </div>
                 <img src="./assets/images/footer/linha.png" alt="" />
                 <div className='container-links'>
-                        <a href="#" onClick={() => scrollToSection('feedbacks')}>FEEDBACKS</a>
-                        <a href="#" onClick={() => scrollToSection('studio')}>ESTUDIO</a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('feedbacks'); }}>FEEDBACKS</a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('studio'); }}>ESTUDIO</a>
                         <div className='icons'>
-                        <a href="#" onClick={() => scrollToSection('orcamento')}>ORÇAMENTO</a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('orcamento'); }}>ORÇAMENTO</a>
                         <img src="./assets/images/footer/icons.png" alt="" />
                         </div>
                 </div>
