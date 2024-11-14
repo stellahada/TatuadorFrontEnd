@@ -47,7 +47,7 @@ export default function Orcamento() {
       setErrorEmail('');
     }
 
-    if (!telefone || !/^\d+$/.test(telefone)) {
+    if (!telefone || !/^\s*\d+\s*$/.test(telefone)) {
       alert('Telefone é obrigatório e deve conter apenas números, por favor digite novamente.');
       valid = false;
     } else {
@@ -67,7 +67,7 @@ export default function Orcamento() {
       setErrorDescricao('');
     }
 
-    if (!orcamento || !/^\d+$/.test(orcamento)) {
+    if (!orcamento || !/^\s*\d+\s*$/.test(orcamento)) {
       alert('Orçamento é obrigatório e deve conter apenas números, por favor digite novamente.');
       valid = false;
     } else {
@@ -133,7 +133,7 @@ export default function Orcamento() {
                 )}
                 {visibilidadeInput == 2 && (
                   <div className='form'>
-                      <textarea name="" id="" cols="30" rows="10" placeholder={placeholder4}onChange={(e)=>setDescricao(e.target.value)} style={{height:'15vh'}}></textarea>
+                      <textarea name="" id="" cols="30" rows="10" placeholder={placeholder4}onChange={(e)=>setDescricao(e.target.value)} style={{height:'8vh'}}></textarea>
                       <input type="text" name="" id="" onChange={(e)=>setOrcamento(e.target.value)}  placeholder={placeholder5} />
                       <input type="date" name="" id="" onChange={(e)=>setData(e.target.value)} placeholder={placeholder6} />
                   </div>
