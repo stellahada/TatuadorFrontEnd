@@ -1,6 +1,13 @@
 import './index.scss'
 
 export default function footer(){
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return(
         <div  className='page-footer'>
             <div className='container'>
@@ -35,16 +42,16 @@ export default function footer(){
                 </div>
                 <img src="./assets/images/footer/linha.png" alt="" />
                 <div className='container-links'>
-                        <a href=''>PÁGINA INICIAL</a>
-                        <a href=''>PORTFÓLIO</a>
-                        <a href=''>ARTISTA</a>
+                        <a href="#" onClick={() => scrollToSection('home')}>PÁGINA INICIAL</a>
+                        <a href="#" onClick={() => scrollToSection('galeria')}>PORTFÓLIO</a>
+                        <a href="#" onClick={() => scrollToSection('artista')}>ARTISTA</a>
                 </div>
                 <img src="./assets/images/footer/linha.png" alt="" />
                 <div className='container-links'>
-                        <a href=''>FEEDBACKS</a>
-                        <a href=''>ESTUDIO</a>
+                        <a href="#" onClick={() => scrollToSection('feedbacks')}>FEEDBACKS</a>
+                        <a href="#" onClick={() => scrollToSection('studio')}>ESTUDIO</a>
                         <div className='icons'>
-                        <a href=''>ORÇAMENTO</a>
+                        <a href="#" onClick={() => scrollToSection('orcamento')}>ORÇAMENTO</a>
                         <img src="./assets/images/footer/icons.png" alt="" />
                         </div>
                 </div>
