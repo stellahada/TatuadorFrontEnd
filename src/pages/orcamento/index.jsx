@@ -67,7 +67,7 @@ export default function Orcamento() {
       setErrorDescricao('');
     }
 
-    if (!orcamento) {
+    if (!orcamento|| /\d+/.test(orcamento)) {
       alert('Orçamento é obrigatoria, por favor digite novamente')
       valid = false;
     } else {
