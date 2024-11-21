@@ -16,23 +16,23 @@ export default function ModalItem({ isOpen, closeModal,idI, nomeI,urlI,disponive
     function validar() {
         let valid = true;
         if (!nome) {
-          alert('Nome é obrigatório, por favor digite novamente')
-          valid = false;
-        }
-    
-        if (!url ) { 
-          alert('Url invalido, por favor digite novamente')
-          valid = false;
-        }
-    
-        if (!qntd) {
-          alert('Quantidade é obrigatório e deve conter apenas números, por favor digite novamente.');
-          valid = false;
-        }
-        if (!qntdTol) {
-            alert('Quantidade Total é obrigatório e deve conter apenas números, por favor digite novamente.');
+            alert('Nome é obrigatório, por favor digite novamente')
             valid = false;
           }
+      
+          if (!url ) { 
+            alert('Url invalido, por favor digite novamente')
+            valid = false;
+          }
+      
+          if (!qntd || qntd > qntdTol || qntd < 0) {
+            alert('Quantidade é obrigatório e deve ser maior que a total, por favor digite novamente.');
+            valid = false;
+          }
+          if (!qntdTol || qntd < 0) {
+              alert('Quantidade Total é obrigatória e deve conter apenas números, por favor digite novamente.');
+              valid = false;
+            }
     
         return valid;
       }
