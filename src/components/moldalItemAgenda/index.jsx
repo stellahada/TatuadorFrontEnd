@@ -21,6 +21,38 @@ export default function ModalItemAgenda({ isOpen, closeModal,idA,dataA,valorA,ur
         return null;
     }
 
+    function validar() {
+        let valid = true;
+        if (!data) {
+          alert('Data é obrigatória, por favor digite novamente')
+          valid = false;
+        }
+    
+        if (!valor ) { 
+          alert('Valor invalido, por favor digite novamente')
+          valid = false;
+        }
+    
+        if (!url) {
+          alert('Url invalida, por favor digite novamente.');
+          valid = false;
+        }
+        if (!horario) {
+            alert('Horario invalido, por favor digite novamente.');
+            valid = false;
+          }
+          if (!cliente) {
+            alert('Cliente invalido, por favor digite novamente.');
+            valid = false;
+          }
+          if (!descricao) {
+            alert('Descricao invalida, por favor digite novamente.');
+            valid = false;
+          }
+    
+        return valid;
+      }
+
 
 
     async function Alterar(){
@@ -56,13 +88,16 @@ export default function ModalItemAgenda({ isOpen, closeModal,idA,dataA,valorA,ur
     }
 
     function fechaModalAlt(){
-        Alterar()
+        if(validar()){
+            Alterar()
+        }
         closeModal()
         
     }
 
     function fechaModalDel(){
-        Deletar()
+            Deletar()
+    
         closeModal()
        
     }

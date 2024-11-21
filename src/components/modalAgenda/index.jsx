@@ -18,23 +18,62 @@ export default function ModalAgenda({ isOpen, closeModal}) {
         return null;
     }
 
+    function validar() {
+        let valid = true;
+        if (!data) {
+            alert('Data é obrigatório, por favor digite novamente')
+            valid = false;
+          }
+      
+          if (!valor ) { 
+            alert('Valor invalido, por favor digite novamente')
+            valid = false;
+          }
+      
+          if (!url) {
+            alert('Url invalida, por favor digite novamente.');
+            valid = false;
+          }
+          if (!horario) {
+              alert('Horario invalido, por favor digite novamente.');
+              valid = false;
+            }
+            if (!cliente) {
+              alert('Cliente invalido, por favor digite novamente.');
+              valid = false;
+            }
+            if (!descricao) {
+              alert('Descricao invalida, por favor digite novamente.');
+              valid = false;
+            }
+    
+        return valid;
+      }
+
 
 
     async function FuncCriar(){
-        let body = {
-            "data":data,
-            "valor":valor,
-            "url":url,
-            "horario": horario,
-            "cliente": cliente,
-            "descricao":descricao,
-
-        }
-        let token = localStorage.getItem('TOKEN');
-        let resp = axios.post(`${API_URL}/agenda`,body,{
-            headers: { 'x-access-token': token }})
+            let body = {
+                "data":data,
+                "valor":valor,
+                "url":url,
+                "horario": horario,
+                "cliente": cliente,
+                "descricao":descricao,
+    
+            }
+            let token = localStorage.getItem('TOKEN');
+            let resp = axios.post(`${API_URL}/agenda`,body,{
+                headers: { 'x-access-token': token }})
+            
+            alert("Novo agendamento cadastrado com sucesso")
+            setData('')
+            setCliente('')
+            setDescricao('')
+            setHorario('')
+            setUrl('')
+            setValor('')
         
-        alert("Novo agendamento cadastrado com sucesso")
     }
 
     function handleButtonClick(event,button) {
@@ -46,7 +85,9 @@ export default function ModalAgenda({ isOpen, closeModal}) {
 
     function fechaModalCad(){
         closeModal()
+        if(validar()){
         FuncCriar()
+        }
     }
 
 

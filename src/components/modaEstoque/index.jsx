@@ -28,12 +28,12 @@ export default function ModalEstoque({ isOpen, closeModal}) {
           valid = false;
         }
     
-        if (!qntd) {
-          alert('Quantidade é obrigatório e deve conter apenas números, por favor digite novamente.');
+        if (!qntd || qntd > qntdTol || qntd < 0) {
+          alert('Quantidade é obrigatório e deve ser maior que a total, por favor digite novamente.');
           valid = false;
         }
-        if (!qntdTol) {
-            alert('Quantidade Total é obrigatório e deve conter apenas números, por favor digite novamente.');
+        if (!qntdTol || qntd < 0) {
+            alert('Quantidade Total é obrigatória e deve conter apenas números, por favor digite novamente.');
             valid = false;
           }
     
@@ -54,6 +54,10 @@ export default function ModalEstoque({ isOpen, closeModal}) {
             
             alert("Novo produto cadastrado com sucesso")
         }
+        setNome('')
+        setQntd('')
+        setQntdTol('')
+        setUrl('')
         
     }
 
