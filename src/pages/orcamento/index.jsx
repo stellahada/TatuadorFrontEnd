@@ -119,7 +119,7 @@ export default function Orcamento() {
             <form action='' className='form'>
                 {visibilidadeInput == 1 && (
                   <div className='form'>
-                      <input name="" id="" cols="30" rows="10" onChange={(e)=>setNome(e.target.value)} placeholder={placeholder1}></input>
+                      <input type="text" name="" id="" cols="30" rows="10" onChange={(e)=>setNome(e.target.value)} placeholder={placeholder1}></input>
                       {errorNome && <p className="error">{errorNome}</p>}
 
                       <input type="text" name="" id="" placeholder={placeholder2} onChange={(e)=>setTo(e.target.value)}/>

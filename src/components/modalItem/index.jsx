@@ -13,19 +13,44 @@ export default function ModalItem({ isOpen, closeModal,idI, nomeI,urlI,disponive
     if (!isOpen) {
         return null;
     }
+    function validar() {
+        let valid = true;
+        if (!nome) {
+          alert('Nome é obrigatório, por favor digite novamente')
+          valid = false;
+        }
+    
+        if (!url ) { 
+          alert('Url invalido, por favor digite novamente')
+          valid = false;
+        }
+    
+        if (!qntd) {
+          alert('Quantidade é obrigatório e deve conter apenas números, por favor digite novamente.');
+          valid = false;
+        }
+        if (!qntdTol) {
+            alert('Quantidade Total é obrigatório e deve conter apenas números, por favor digite novamente.');
+            valid = false;
+          }
+    
+        return valid;
+      }
 
     async function Alterar(){
-        let body = {
-            "nome":nome,
-            "url":url,
-            "disponivel": qntd,
-            "total": qntdTol
+        if(validar()){
+            let body = {
+                "nome":nome,
+                "url":url,
+                "disponivel": qntd,
+                "total": qntdTol
+            }
+            let token = localStorage.getItem('TOKEN');
+            let resp = axios.put(`${API_URL}/produto/`+idI, body,{
+                headers: { 'x-access-token': token }})
+            
+            alert("Produto alterado cadastrado com sucesso")
         }
-        let token = localStorage.getItem('TOKEN');
-        let resp = axios.put(`${API_URL}/produto/`+idI, body,{
-            headers: { 'x-access-token': token }})
-        
-        alert("Produto alterado cadastrado com sucesso")
     }
 
     async function Deletar(){

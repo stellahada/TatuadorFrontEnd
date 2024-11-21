@@ -16,18 +16,45 @@ export default function ModalEstoque({ isOpen, closeModal}) {
     }
 
 
-    async function FuncCriar(){
-        let body = {
-            "nome":nome,
-            "url":url,
-            "disponivel": qntd,
-            "total": qntdTol
+    function validar() {
+        let valid = true;
+        if (!nome) {
+          alert('Nome é obrigatório, por favor digite novamente')
+          valid = false;
         }
-        let token = localStorage.getItem('TOKEN');
-        let resp = axios.post(`${API_URL}/produtos`, body,{
-            headers: { 'x-access-token': token }})
+    
+        if (!url ) { 
+          alert('Url invalido, por favor digite novamente')
+          valid = false;
+        }
+    
+        if (!qntd) {
+          alert('Quantidade é obrigatório e deve conter apenas números, por favor digite novamente.');
+          valid = false;
+        }
+        if (!qntdTol) {
+            alert('Quantidade Total é obrigatório e deve conter apenas números, por favor digite novamente.');
+            valid = false;
+          }
+    
+        return valid;
+      }
+
+    async function FuncCriar(){
+        if(validar()){
+            let body = {
+                "nome":nome,
+                "url":url,
+                "disponivel": qntd,
+                "total": qntdTol
+            }
+            let token = localStorage.getItem('TOKEN');
+            let resp = axios.post(`${API_URL}/produtos`, body,{
+                headers: { 'x-access-token': token }})
+            
+            alert("Novo produto cadastrado com sucesso")
+        }
         
-        alert("Novo produto cadastrado com sucesso")
     }
 
     function fechaModalCad(){
@@ -52,11 +79,11 @@ export default function ModalEstoque({ isOpen, closeModal}) {
                 <form>
                     <div className='container-input'>
                         <label htmlFor=''>Nome</label>
-                        <input type="text" onChange={(e)=>setNome(e.target.value)}/>
+                        <input type="text"  onChange={(e)=>setNome(e.target.value)}/>
                     </div>
                     <div className='container-input'>
                         <label htmlFor=''>Url Imagem</label>
-                        <input type="text" onChange={(e)=>setUrl(e.target.value)}/>
+                        <input type="text"  onChange={(e)=>setUrl(e.target.value)}/>
                     </div>
                     <div className='container-input'>
                         <label htmlFor=''>Quantidade Disponível</label>
