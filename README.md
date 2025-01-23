@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# FrontEnd tatuador🩸
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o repositório do front-end para o site de um tatuador, desenvolvido para fornecer uma experiência intuitiva e visualmente atrativa para clientes que desejam conhecer os trabalhos, entrar em contato e agendar sessões.
 
-## Available Scripts
+![Dribbble](https://github.com/user-attachments/assets/20b2cac2-a2b0-4a64-b9ec-30bc7d2f6816)
 
-In the project directory, you can run:
+## 🎨 Tecnologias Utilizadas
+HTML: Estrutura básica do site.
 
-### `npm start`
+SCSS: Estilização e layout responsivo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+JavaScript: Interatividade e funcionalidades dinâmicas.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🖥️ Funcionalidades
+Exibição de portfólio: Galeria com os trabalhos do tatuador.
 
-### `npm test`
+Formulário de contato: Permite aos clientes enviar email diretamente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sessão sobre o tatuador: Informações sobre o artista e seu estilo.
 
-### `npm run build`
+Agendamento online: Ferramenta para marcar sessões
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Gerenciamento de estoque: Ferramenta para gerenciar o estoque do estúdio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribuidores 🧑‍💻👩‍💻🧑‍💻
+| [<img src="https://avatars.githubusercontent.com/u/95144250?s=400&u=149cf20f52f4c096721d16967b22655f18e5c7f5&v=4" width=115><br><sub>Samuel Victor</sub>](https://github.com/Samuel-045) | [<img src="https://avatars.githubusercontent.com/u/138524660?v=4" width=115><br><sub>Erick Bernat</sub>](https://github.com/ErickBernat) | [<img src="https://avatars.githubusercontent.com/u/91349698?v=4" width=115><br><sub>Stella Hada</sub>](https://github.com/stellahada) | 
+| :---: | :---: | :---: |
